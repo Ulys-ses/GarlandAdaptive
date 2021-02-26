@@ -1,0 +1,58 @@
+API сервера (json, flask):
+
+GarlandAdaptive/
+
+Получить параметры
+	Parameters/ GET
+		Input  -
+		Output [{Name: <ParameterName>, Value:<ParameterValue>},...]
+
+Сохранить параметры
+	Parameters/ PUT
+		Input  [{Name: <ParameterName>, Value:<ParameterValue>},...]
+		Output -
+
+Получить список программ
+	Programms/ GET
+		Input  -
+		Output [<ProgrammName>, ...]
+
+Получить программу
+	Programms/<ProgrammName> GET
+		Input  -
+		Output [{Grid: <GridName>, Effect: <EffectName>, Repeat: <RepeatQuant>}, ...]
+
+Сохранить программу
+	Programms/<ProgrammName> PUT
+		Input  [{Grid: <GridName>, Effect: <EffectName>, Repeat: <RepeatQuant>}, ...]
+		Output -
+
+Удалить программу
+	Programms/<ProgrammName> DELETE
+		Input  -
+		Output -
+
+Получить список сеток
+	Grids/ GET
+		Input  -
+		Output [<GridName>, ...]
+
+Получить сетку
+	Grids/<GridName> GET
+		Input  -
+		Output {Dimensions:[d1, d2, d3], Groups: [{Index1: <I1>, Index2: <I1>, ..., LEDs:[<LED1>, ...]}, ...]}
+
+Сохранить сетку
+	Grids/<GridName> PUT
+		Input  {Dimensions:[d1, d2, d3], Groups: [{Index1: <I1>, Index2: <I1>, ..., LEDs:[<LED1>, ...]}, ...]}
+		Output -
+
+Удалить сетку
+	Grids/<GridName> DELETE
+		Input  -
+		Output -
+
+Получить номер светодиода в режиме создания сетки
+	CreateGridMode/EDNum GET
+		Input  -
+		Output <Number>
